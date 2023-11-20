@@ -5,15 +5,17 @@ import java.util.List;
 public class Lion {
 
     boolean hasMane;
+    Feline felineMock;
 
-    public Lion(String sex) throws Exception {
+    public Lion(String sex, Feline felineMock) throws Exception {
         if ("Самец".equals(sex)) {
             hasMane = true;
         } else if ("Самка".equals(sex)) {
             hasMane = false;
         } else {
-            throw new Exception("Используйте допустимые значения пола животного - самей или самка");
+            throw new Exception("Используйте допустимые значения пола животного - самец или самка");
         }
+        this.felineMock = felineMock;
     }
 
     Feline feline = new Feline();
