@@ -18,12 +18,14 @@ public class AnimalTest {
 
     @Test
     public void testGetFoodForHerbivore() throws Exception {
-        assertEquals(List.of("Трава", "Различные растения"), animal.getFood("Травоядное"));
+        List<String> foodHerbivore = List.of("Животные", "Птицы", "Рыба");
+        assertEquals(foodHerbivore, animal.getFood("Травоядное"));
     }
 
     @Test
     public void testGetFoodForCarnivore() throws Exception {
-        assertEquals(List.of("Животные", "Птицы", "Рыба"), animal.getFood("Хищник"));
+        List<String> foodCarnivore = List.of("Животные", "Птицы", "Рыба");
+        assertEquals(foodCarnivore, animal.getFood("Хищник"));
     }
 
     @Test(expected = Exception.class)
